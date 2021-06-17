@@ -10,7 +10,7 @@ import Firebase
 import FirebaseStorage
 
 class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var selectContactBtn: UIButton!
     @IBOutlet weak var descriptionTextField: UITextField!
@@ -40,24 +40,26 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
     
     @IBAction func selectContactTapped(_ sender: Any) {
         selectContactBtn.isEnabled = false
-        let imagesFolder = Storage.storage().reference().child("imagenes")
+        let storageReference = Storage.storage()
+        let imagesFolder = storageReference.reference().child("imagenes")
         let imageData = imageView.image!.pngData()!
         
-        imagesFolder.child("\(imagenID).jpg").putData(imageData, metadata: nil, completion: {(metadata, error) in
-            print ("intentando subir la imagen")
-            if error != nil {
-                print("Ocurrio un error: \(String(describing: error))")
-            } else {
-                //self.performSegue(withIdentifier: "selectContactSegue", sender: metadata?.downloadURL()!.absoluteString)
+        imagesFolder.putData(imageData, metadata: nil) { metadata, error  in
+            imagesFolder.downloadURL { url, error in
+                print("url")
+                guard let url = url else { return }
+                print(url.absoluteString)
+                self.performSegue(withIdentifier: "selectContactSegue", sender: url.absoluteString)
             }
-        })
+            
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let siguienteVC = segue.destination as! SelectUserViewController
         siguienteVC.imagenURL = sender as! String
         siguienteVC.descrip = descriptionTextField.text!
-        siguienteVC.imagenURL = imagenID
+        siguienteVC.imagenID = imagenID
     }
     
     @IBAction func onClickBackBtn(_ sender: Any) {

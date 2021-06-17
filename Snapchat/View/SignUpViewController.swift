@@ -37,14 +37,14 @@ class SignUpViewController: UIViewController {
         let user = userOrEmailTextField.text!
         let password = passwordTextField.text!
         
-        let uid = Int.random(in: 1..<1000)
-        storeData(user: user, uid: String(uid))
-
+       
         Auth.auth().createUser(withEmail: user, password: password) { (responseUser, error) in
             if error == nil {
                 print("El usuario fue creado exitosamente")
-                
-                
+                let userFirebase = Auth.auth().currentUser
+                let uid = userFirebase?.uid
+                self.storeData(user: user, uid: uid!)
+
                 self.performSegue(withIdentifier: "signUpSegue", sender: nil)
             } else {
                 let alert = UIAlertController(title: "Error", message: "User or Password incorrect", preferredStyle: .alert)

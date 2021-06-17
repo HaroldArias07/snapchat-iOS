@@ -20,7 +20,7 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.dataSource = self
         tableView.delegate = self
         
-        Database.database().reference().child("usuarios").child(Auth.auth().currentUser!.uid).child("snaps").observe(DataEventType.childAdded, with: {(snapshot) in
+        Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).child("snaps").observe(DataEventType.childAdded, with: {(snapshot) in
             let snap = Snap()
             
             snap.imagenURL = (snapshot.value as! NSDictionary)["imagenURL"] as! String
@@ -32,7 +32,7 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             self.tableView.reloadData()
         })
         
-        Database.database().reference().child("usuarios").child(Auth.auth().currentUser!.uid).child("snaps").observe(DataEventType.childRemoved, with: {(snapshot) in
+        Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).child("snaps").observe(DataEventType.childRemoved, with: {(snapshot) in
             var iterador = 0
             for snap in self.snaps{
                 if snap.id == snapshot.key {

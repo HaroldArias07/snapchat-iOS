@@ -22,7 +22,7 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         tableView.delegate = self
         tableView.dataSource = self
         
-        Database.database().reference().child("usuarios").observe(DataEventType.childAdded, with: {(snapshot) in
+        Database.database().reference().child("users").observe(DataEventType.childAdded, with: {(snapshot) in
             let usuario = Usuario()
             usuario.email = (snapshot.value as! NSDictionary)["email"] as! String
             usuario.uid = snapshot.key
@@ -44,9 +44,15 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let usuario = usuarios[indexPath.row]
-        let snap = ["from":Auth.auth().currentUser!.email!, "descripcion":descrip, "imagenURL":imagenURL, "imagenID":imagenID]
-        Database.database().reference().child("usuarios").child("snaps").childByAutoId().setValue(snap)
+        print("gggggggggg")
+        let usuario = usuarios[indexPath.row]
+        let snap = [
+            "from": Auth.auth().currentUser!.email!,
+            "descripcion":descrip,
+            "imagenURL":imagenURL,
+            "imagenID":imagenID
+        ]
+        Database.database().reference().child("users").child(usuario.uid).child("snaps").childByAutoId().setValue(snap)
         navigationController?.popToRootViewController(animated: true)
     }
     
