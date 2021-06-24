@@ -80,9 +80,9 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func onBtnCloseSesion(_ sender: Any) {
-        let storyboard:UIStoryboard = UIStoryboard(name: "HomeStoryBoard", bundle: nil)
-        let listView = storyboard.instantiateViewController(identifier: "ListVC") as! MainViewController
-        listView.modalPresentationStyle = .fullScreen
-        self.present(listView, animated: true, completion: nil)
+        let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginView = storyboard.instantiateViewController(identifier: "mainVC") as! MainViewController
+        loginView.modalPresentationStyle = .fullScreen
+        self.present(loginView, animated: true, completion: nil)
     }
 }
