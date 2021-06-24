@@ -44,7 +44,7 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
         let imagesFolder = storageReference.reference().child("imagenes")
         let imageData = imageView.image!.pngData()!
         
-        imagesFolder.putData(imageData, metadata: nil) { metadata, error  in
+        imagesFolder.child("\(NSUUID().uuidString).jpg").putData(imageData, metadata: nil) { metadata, error  in
             imagesFolder.downloadURL { url, error in
                 print("url")
                 guard let url = url else { return }
@@ -54,6 +54,7 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
             
         }
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let siguienteVC = segue.destination as! SelectUserViewController

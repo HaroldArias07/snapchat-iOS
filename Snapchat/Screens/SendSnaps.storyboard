@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Pc-WC-6p8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7sV-kJ-bp2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,47 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
-        <scene sceneID="8ZG-56-Sdp">
-            <objects>
-                <viewController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="0Pc-WC-6p8" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FsY-iZ-X4f">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ejemplo de tab 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aew-8i-XOB">
-                                <rect key="frame" x="54" y="421.5" width="306.5" height="53"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0C-G6-9We">
-                                <rect key="frame" x="345" y="48" width="49" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="plus" catalog="system"/>
-                                <connections>
-                                    <segue destination="7sV-kJ-bp2" kind="presentation" modalPresentationStyle="fullScreen" id="A29-q5-WtU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijb-xc-Bpw">
-                                <rect key="frame" x="33" y="51" width="46" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="arrowshape.turn.up.backward.fill" catalog="system"/>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="l6B-1H-mjD"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="aew-8i-XOB" firstAttribute="centerX" secondItem="FsY-iZ-X4f" secondAttribute="centerX" id="0XU-wc-Mke"/>
-                            <constraint firstItem="aew-8i-XOB" firstAttribute="centerY" secondItem="FsY-iZ-X4f" secondAttribute="centerY" id="dhf-xn-dco"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="jOk-P7-6mW"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xI2-GK-YKr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6408.6956521739139" y="-451.33928571428567"/>
-        </scene>
         <!--Image View Controller-->
         <scene sceneID="3Fs-RN-2tR">
             <objects>
@@ -92,20 +51,20 @@
                                     <action selector="selectContactTapped:" destination="7sV-kJ-bp2" eventType="touchUpInside" id="JoZ-hi-TPN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpv-q7-6wE">
-                                <rect key="frame" x="334" y="49" width="50" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="camera.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="cameraTapped:" destination="7sV-kJ-bp2" eventType="touchUpInside" id="XXE-1g-iz3"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSA-Mf-qnh">
-                                <rect key="frame" x="20" y="45" width="46" height="32"/>
+                                <rect key="frame" x="20" y="45" width="40" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="arrowshape.turn.up.backward.fill" catalog="system"/>
                                 <connections>
                                     <action selector="onClickBackBtn:" destination="7sV-kJ-bp2" eventType="touchUpInside" id="3Ry-CL-KWq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpv-q7-6wE">
+                                <rect key="frame" x="354" y="44.5" width="40" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="camera.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="cameraTapped:" destination="7sV-kJ-bp2" eventType="touchUpInside" id="XXE-1g-iz3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -145,7 +104,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKj-EP-jVX">
-                                <rect key="frame" x="20" y="45" width="46" height="32"/>
+                                <rect key="frame" x="20" y="45" width="40" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="arrowshape.turn.up.backward.fill" catalog="system"/>
                                 <connections>
@@ -175,7 +134,6 @@
     <resources>
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
