@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5C54407CF3A112BC04A913C7 /* Pods_Snapchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B419768E0BD5FDC3A79A4E62 /* Pods_Snapchat.framework */; };
 		7D305CE62664365F0061800A /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D305CE52664365F0061800A /* ImageViewController.swift */; };
+		7D8BC1082684BC9400FD7B74 /* SendSnaps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8BC1072684BC9400FD7B74 /* SendSnaps.storyboard */; };
+		7D8BC10A2684BCF800FD7B74 /* ViewSnaps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8BC1092684BCF800FD7B74 /* ViewSnaps.storyboard */; };
 		7DB788A626563C03005F9D45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB788A526563C03005F9D45 /* AppDelegate.swift */; };
 		7DB788A826563C03005F9D45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB788A726563C03005F9D45 /* SceneDelegate.swift */; };
 		7DB788AA26563C03005F9D45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB788A926563C03005F9D45 /* ViewController.swift */; };
@@ -29,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		7D305CE52664365F0061800A /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		7D8BC1072684BC9400FD7B74 /* SendSnaps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendSnaps.storyboard; sourceTree = "<group>"; };
+		7D8BC1092684BCF800FD7B74 /* ViewSnaps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViewSnaps.storyboard; sourceTree = "<group>"; };
 		7DB788A226563C03005F9D45 /* Snapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DB788A526563C03005F9D45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DB788A726563C03005F9D45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 				7DB788AB26563C03005F9D45 /* Main.storyboard */,
 				7DB788B026563C05005F9D45 /* LaunchScreen.storyboard */,
 				7DB788BD2656697E005F9D45 /* HomeStoryBoard.storyboard */,
+				7D8BC1072684BC9400FD7B74 /* SendSnaps.storyboard */,
+				7D8BC1092684BCF800FD7B74 /* ViewSnaps.storyboard */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -233,6 +239,8 @@
 			files = (
 				7DB788B226563C05005F9D45 /* LaunchScreen.storyboard in Resources */,
 				7DB788BE2656697E005F9D45 /* HomeStoryBoard.storyboard in Resources */,
+				7D8BC1082684BC9400FD7B74 /* SendSnaps.storyboard in Resources */,
+				7D8BC10A2684BCF800FD7B74 /* ViewSnaps.storyboard in Resources */,
 				7DEFF09826726BF5004A9F0E /* GoogleService-Info.plist in Resources */,
 				7DB788AF26563C05005F9D45 /* Assets.xcassets in Resources */,
 				7DB788AD26563C03005F9D45 /* Main.storyboard in Resources */,

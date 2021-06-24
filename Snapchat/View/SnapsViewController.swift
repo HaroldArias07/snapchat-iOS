@@ -79,4 +79,10 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func onBtnCloseSesion(_ sender: Any) {
+        let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginView = storyboard.instantiateViewController(identifier: "mainVC") as! MainViewController
+        loginView.modalPresentationStyle = .fullScreen
+        self.present(loginView, animated: true, completion: nil)
+    }
 }

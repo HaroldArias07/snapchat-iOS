@@ -13,14 +13,5 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func closeSessionTapped(_ sender: Any) {
-        let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let loginView = storyboard.instantiateViewController(identifier: "mainVC") as! MainViewController
-        loginView.modalPresentationStyle = .fullScreen
-        self.present(loginView, animated: true, completion: nil)
-    }
-    
-    
-    
 }
 

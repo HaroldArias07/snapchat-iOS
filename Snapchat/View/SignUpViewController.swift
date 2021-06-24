@@ -20,7 +20,7 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userOrEmailTextField?.text = "luis.murillo.12@gmail.com"
+        userOrEmailTextField?.text = "harold.arias@tecsup.edu.pe"
         passwordTextField?.text = "123456"
         setUpStyle()
     }
@@ -44,7 +44,6 @@ class SignUpViewController: UIViewController {
                 let userFirebase = Auth.auth().currentUser
                 let uid = userFirebase?.uid
                 self.storeData(user: user, uid: uid!)
-
                 self.performSegue(withIdentifier: "signUpSegue", sender: nil)
             } else {
                 let alert = UIAlertController(title: "Error", message: "User or Password incorrect", preferredStyle: .alert)
