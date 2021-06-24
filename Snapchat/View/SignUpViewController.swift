@@ -20,7 +20,7 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userOrEmailTextField?.text = "harold.arias@tecsup.edu.pe"
+        userOrEmailTextField?.text = "ivan.oscco@tecsup.edu.pe"
         passwordTextField?.text = "123456"
         setUpStyle()
     }
