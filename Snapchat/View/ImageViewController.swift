@@ -51,7 +51,6 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
                 print(url.absoluteString)
                 self.performSegue(withIdentifier: "selectContactSegue", sender: url.absoluteString)
             }
-            
         }
     }
     

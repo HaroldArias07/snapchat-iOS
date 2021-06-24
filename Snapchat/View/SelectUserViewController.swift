@@ -53,7 +53,13 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
             "imagenID":imagenID
         ]
         Database.database().reference().child("users").child(usuario.uid).child("snaps").childByAutoId().setValue(snap)
-        navigationController?.popToRootViewController(animated: true)
+        
+        let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginView = storyboard.instantiateViewController(identifier: "mainVC") as! MainViewController
+        loginView.modalPresentationStyle = .fullScreen
+        self.present(loginView, animated: true, completion: nil)
+        
+        //navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func onClickBackBtn(_ sender: Any) {

@@ -172,7 +172,7 @@
         <!--List-->
         <scene sceneID="nBp-lH-oY3">
             <objects>
-                <viewController wantsFullScreenLayout="YES" id="GVa-LL-oYV" customClass="SnapsViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListVC" wantsFullScreenLayout="YES" id="GVa-LL-oYV" customClass="SnapsViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wbs-rE-w9k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
