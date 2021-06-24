@@ -54,12 +54,12 @@ class SelectUserViewController: UIViewController, UITableViewDataSource, UITable
         ]
         Database.database().reference().child("users").child(usuario.uid).child("snaps").childByAutoId().setValue(snap)
         
-        let storyboard:UIStoryboard = UIStoryboard(name: "HomeStoryBoard", bundle: nil)
-        let listView = storyboard.instantiateViewController(identifier: "ListVC") as! MainViewController
-        listView.modalPresentationStyle = .fullScreen
-        self.present(listView, animated: true, completion: nil)
+        //let storyboard:UIStoryboard = UIStoryboard(name: "HomeStoryBoard", bundle: nil)
+        //let listView = storyboard.instantiateViewController(identifier: "ListVC") as! MainViewController
+        //listView.modalPresentationStyle = .fullScreen
+        //self.present(listView, animated: true, completion: nil)
         
-        //navigationController?.popToRootViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func onClickBackBtn(_ sender: Any) {
